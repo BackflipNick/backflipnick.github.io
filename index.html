@@ -2,10 +2,12 @@
 <a href ="" onclick="process()">Convert</a>
 
 <script type="text/javascript">
-  var url=document.getElementById("inUrl");
-  var link = url.value.replace("open?", "uc?export=download&");
-  url.value = link;
-  url.select();
-  document.execCommand("copy");
-  alert("Link has been converted and copied!");
+  function process() {
+    var url = document.getElementById("inUrl");
+    var link = url.value.replace("open?", "uc?export=download&");
+    url.value = link;
+    url.select();
+    document.execCommand("copy");
+    alert("Link has been converted and copied!"); 
+  }
 </script>
