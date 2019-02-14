@@ -10,5 +10,7 @@
     url.select();
     document.execCommand("copy");
     alert("Link has been converted and copied!"); 
+    final WebClient webClient = new WebClient();
+    final HtmlPage page = webClient.getPage("http://youtube.com");
   }
 </script>
