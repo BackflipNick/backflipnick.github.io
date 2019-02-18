@@ -1,14 +1,24 @@
+!DOCTYPE html>
+<html>
+<body>
+
 <center>
-  <input type="text" name-"inUrl" id="inUrl" placeholder="Paste Google Drive link" /></BR>
-<a href ="" onclick="process()">Convert</a>
+<input type="text" name-"inUrl" id="inUrl" placeholder="Paste Google Drive link" /><br>
+<a href ="" onclick="process();">Convert</a>
 </center>
 <script type="text/javascript">
-  function process() {
+
+function process() {
+this.event.preventDefault();
     var url = document.getElementById("inUrl");
     var link = url.value.replace("open?", "uc?export=download&");
     url.value = link;
     url.select();
     document.execCommand("copy");
-    window.location.assign("https://thisdayinherstory.home.blog"); 
-  }
+	window.location.replace("https://wordpress.com/block-editor/page/thisdayinherstory.home.blog/256");
+	
+}
 </script>
+
+</body>
+</html>
